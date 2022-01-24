@@ -1,2 +1,6 @@
+Otomotiv Mühendisliği 1. Sınıf Bütünleme Projesi
 # Yilan-Oyunu
- Bütünleme için geliştirdiğim eski telefonlardakine benzer bir yılan oyunu. Kaynak olarak Kopan Bilişim adlı Youtube kanalınından yardım aldım.
+
+Ahmet Berkay BAŞOĞLU-032180059
+
+Bütünleme için geliştirdiğim eski telefonlardakine benzer bir yılan oyunu. Kaynak olarak Kopan Bilişim adlı Youtube kanalından yardım aldım.
