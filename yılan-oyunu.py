@@ -28,6 +28,18 @@ yem.penup()
 yem.goto(0,0)
 yem.yön = "dur"
 
+puan = 0
+
+#Puan tablosu eklendi. Tablonun fontu, kordinatları ve büyüklüğü belirlendi.
+yaz = turtle.Turtle()
+yaz.shape("square")
+yaz.color("white")
+yaz.penup()
+yaz.goto(0,260)
+yaz.hideturtle()
+yaz.write('Puan: {}'.format(puan), align='center', font=('Courier', 24, 'normal'))
+
+
 #Yılanı ekranda hareket ettirmek için fonksiyonlar tanımladım.
 def yukarı():
     if yılan.yön != "aşağı":
@@ -86,13 +98,23 @@ while True:
         for i in bölümler:
             i.goto(2000,2000)
 
-        bölümler.clear()
+        bölümler.clear()       
+#Yılan kenarlardan birine çarptığında puan tablosunun sıfırlanmasını sağladım.        
+        puan = 0
+        yaz.clear()
+        yaz.write('Puan: {}'.format(puan), align='center', font=('Courier', 24, 'normal'))
 
 #Yılan ve yem arasında 20 pikselden az kaldığında yılanın yemi yemesini, yemin yenildikten sonra ekranda (ekrandan çıkmaması için -290,290 piksel arası aldım) rastgele bir kordinatta çıkmasını ayarladım.
     if yılan.distance(yem) < 20:
         x = random.randint(-290,290)
         y = random.randint(-290,290)
         yem.goto(x,y)
+
+#Yılan her yem yediğinde puan tablosuna 10 puan eklenmesini sağladım.
+        puan = puan + 10
+        yaz.clear()
+        yaz.write('Puan: {}'.format(puan), align='center', font=('Courier', 24, 'normal'))
+
 
 #Burada yılan her yem yediğinde yemin yılana eklenmesini, eklenen kısmın şekli, hızı ve rengini ayarladım. Ayrıca eklenen yemin yılanın arkasında çizgi bırakmasını engelledim(yeniBölüm.penup komutu ile). yeniBölümü bölümler kısmına ekledim
         yeniBölüm = turtle.Turtle()
@@ -129,5 +151,9 @@ while True:
 
 
            bölümler.clear()
+#Yılanın kafası kendi vücuduna çarptığında puan tablosunun sıfırlanmasını sağladım.           
+           puan = 0
+           yaz.clear()
+           yaz.write('Puan: {}'.format(puan), align='center', font=('Courier', 24, 'normal'))
 
     time.sleep(0.1)
