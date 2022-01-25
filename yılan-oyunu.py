@@ -82,8 +82,7 @@ def hareket_et():
         x = yılan.xcor()
         yılan.setx(x - 20)
 
-
-
+#Yılanın vücudu için bölümler kısmını ekledim ve ekranın açık kalmasını sağladım.
 bölümler = []
 while True:
     oyunEkranı.update()
