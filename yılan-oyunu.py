@@ -30,10 +30,11 @@ yem.yön = "dur"
 
 puan = 0
 
-#Puan tablosu eklendi. Tablonun fontu, kordinatları ve büyüklüğü belirlendi.
+#Puan tablosu eklendi. Tablonun fontu, kordinatları, rengi, büyüklüğü belirlendi ve ortalandı. Turtle hideturte ile saklandı.
 yaz = turtle.Turtle()
 yaz.shape("square")
 yaz.color("white")
+yaz.speed(0)
 yaz.penup()
 yaz.goto(0,260)
 yaz.hideturtle()
