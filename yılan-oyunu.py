@@ -4,11 +4,12 @@ import time
 import random
 from turtle import Turtle
 
-#Oyunun ekranının ebatlarını ve rengini ayarladım.
+#Oyunun ekranının ebatlarını ve rengini ayarladım. Pencere başlığı girildi.
 oyunEkranı = turtle.Screen()
 oyunEkranı.tracer(0)
 oyunEkranı.setup(600,600)
 oyunEkranı.bgcolor("black")
+oyunEkranı.title("Yılan Oyunu")
 
 #Oynıyacağımız yılanın şekli, rengi, hızı ve ilk konumunu ayarladım.
 yılan: Turtle = turtle.Turtle()
